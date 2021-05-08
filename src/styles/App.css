@@ -1,0 +1,17 @@
+
+.main-container {
+    display: flex;
+}
+
+.left-container {
+    flex: 0 1 20%;
+    padding: .5em;
+    background: #ffff;
+    border-radius: 3px;
+}
+.right-container {
+    flex: 0 1 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
