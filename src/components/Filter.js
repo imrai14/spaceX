@@ -18,7 +18,7 @@ const SucessLaunchFilter = (props) => {
     return <div>
         <div>Success Launch</div>
         <button onClick= { () =>
-                props.launchSucc('true')} className="Common-btn">True</button>
+                props.launchSucc('true')} className="Common-btn">True-Netlify Test</button>
         <button onClick= { () =>
                 props.launchSucc('false')} className="Common-btn">False</button>
     </div>
