@@ -16,9 +16,9 @@ const Filter = (props) => {
 const SucessLaunchFilter = (props) => {
 
     return <div>
-        <div>Success Launch</div>
+        <div className="label">Success Launch</div>
         <button onClick= { () =>
-                props.launchSucc('true')} className="Common-btn">True-Netlify Test</button>
+                props.launchSucc('true')} className="Common-btn">True</button>
         <button onClick= { () =>
                 props.launchSucc('false')} className="Common-btn">False</button>
     </div>
@@ -28,7 +28,7 @@ const SucessLaunchFilter = (props) => {
 
 const SucessLandingFilter = (props) => {
     return <div>
-        <div>Success Landing</div>
+        <div className="label">Success Landing</div>
         <button onClick= { () =>
                 props.landSucc('true')} className="Common-btn">True</button>
         <button onClick= { () =>

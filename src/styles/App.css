@@ -8,6 +8,7 @@
     padding: .5em;
     background: #ffff;
     border-radius: 3px;
+    text-align: center;
 }
 .right-container {
     flex: 0 1 80%;
