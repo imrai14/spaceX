@@ -16,7 +16,7 @@ const Filter = (props) => {
 const SucessLaunchFilter = (props) => {
 
     return <div>
-        <div className="label">Success Launch</div>
+        <div className="label">Success Launch </div>
         <button onClick= { () =>
                 props.launchSucc('true')} className="Common-btn">True</button>
         <button onClick= { () =>
