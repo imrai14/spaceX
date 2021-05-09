@@ -1,11 +1,14 @@
+import "../styles/Widget.css";
 
 const Widget = (props) => {
     const data = props.item;
     return <div>
-        <img src={data.links.mission_patch} alt="This is Space X" width="50px"/>
-        <div>Mission Id: {data.flight_number}</div>
-        <div>launch_year: {data.launch_year}</div>
-        <div>launch_success: {(data.launch_success).toString()}</div>
+        <div className="Image-wrapper">
+            <img src={data.links.mission_patch} alt="This is Space X" width="200px"/>
+        </div>
+        <div className="label-wrapper">Mission Id: {data.flight_number}</div>
+        <div className="label-wrapper">launch_year: {data.launch_year}</div>
+        <div className="label-wrapper">launch_success: {String(data.launch_success)}</div>
     </div>
 }
 

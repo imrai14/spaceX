@@ -21,6 +21,21 @@ const App = () => {
         }
     }
 
+    async function getDataWithLaunchYear(year){
+        let resp =  await getSpaceXLauch(`limit=100&launch_year=${year}`);
+        setrocketDetails(resp.data); 
+    }
+
+    async function getDataForLaunchSuccess(type){
+        let resp =  await getSpaceXLauch(`limit=100&launch_success=${type}`);
+        setrocketDetails(resp.data); 
+    }
+
+    async function getDataForLandSuccess(type){
+        let resp =  await getSpaceXLauch(`limit=100&land_success=${type}`);
+        setrocketDetails(resp.data); 
+    }
+
     useEffect(() => {
         getApiData();
 
@@ -30,9 +45,9 @@ const App = () => {
             <Header />
                 <div className="main-container">
                     <div className="left-container">
-                        <Filter launchYear={launchYear}/>
-                        <SucessLaunchFilter />
-                        <SucessLandingFilter />
+                        <Filter launchYear={launchYear} launchFunc={getDataWithLaunchYear}/>
+                        <SucessLaunchFilter  launchSucc={getDataForLaunchSuccess}/>
+                        <SucessLandingFilter landSucc={getDataForLandSuccess} />
 
                     </div>
                     <div className="right-container">

@@ -3,7 +3,8 @@ import '../styles/Filter.css';
 const Filter = (props) => {
     if (props.launchYear) {
         return props.launchYear.map(item => {
-            return <button className="Common-btn" key={ item.toString() }>{ item }</button>;
+            return <button className="Common-btn" onClick= { () =>
+                props.launchFunc(item)} key={ item.toString() }>{ item }</button>;
         })
     }
     else {
@@ -12,22 +13,26 @@ const Filter = (props) => {
 }
 
 
-const SucessLaunchFilter = () => {
+const SucessLaunchFilter = (props) => {
 
     return <div>
         <div>Success Launch</div>
-        <button className="Common-btn">True</button>
-        <button className="Common-btn">False</button>
+        <button onClick= { () =>
+                props.launchSucc('true')} className="Common-btn">True</button>
+        <button onClick= { () =>
+                props.launchSucc('false')} className="Common-btn">False</button>
     </div>
 
 }
 
 
-const SucessLandingFilter = () => {
+const SucessLandingFilter = (props) => {
     return <div>
         <div>Success Landing</div>
-        <button className="Common-btn">True</button>
-        <button className="Common-btn">False</button>
+        <button onClick= { () =>
+                props.landSucc('true')} className="Common-btn">True</button>
+        <button onClick= { () =>
+                props.landSucc('false')} className="Common-btn">False</button>
     </div>
 
 }
